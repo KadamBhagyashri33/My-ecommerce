@@ -1,28 +1,12 @@
-package com.productservicecatalog.productservicecatalog.model;
+package com.productservicecatalog.productservicecatalog.vo;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+public class ProductVO {
 
-@Entity
-public class Product {
-	
-	@Id
-	@GeneratedValue
 	private Long id;
-	
-	@Column(nullable=false)
 	private String productName;
-	
-	
-	@Column(nullable=false)
 	private Long price;
-	@Column
 	private String description;
-	@Column
 	private String category;
-	@Column
 	private int availability;
 
 	public Long getId() {
@@ -33,6 +17,7 @@ public class Product {
 		this.id = id;
 	}
 
+	
 	public String getProductName() {
 		return productName;
 	}
@@ -74,9 +59,11 @@ public class Product {
 	}
 	@Override
 	public String toString() {
-		return "Product [id=" + id + ", productName=" + productName + ", price=" + price + ", description="
+		return "ProductVO [id=" + id + ", productName=" + productName + ", price=" + price + ", description="
 				+ description + ", category=" + category + ", availability=" + availability + "]";
 	}
 
 
 }
+
+
