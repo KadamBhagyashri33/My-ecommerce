@@ -1,10 +1,17 @@
 package com.productservicecatalog.productservicecatalog.vo;
 
+import javax.validation.constraints.NotNull;
+
 public class ProductVO {
 
 	private Long id;
+
+	@NotNull(message = "Product name cant be null")
 	private String productName;
+
+	@NotNull(message = "Price value cant be null")
 	private Long price;
+
 	private String description;
 	private String category;
 	private int availability;
@@ -17,7 +24,6 @@ public class ProductVO {
 		this.id = id;
 	}
 
-	
 	public String getProductName() {
 		return productName;
 	}
@@ -57,13 +63,11 @@ public class ProductVO {
 	public void setAvailability(int availability) {
 		this.availability = availability;
 	}
+
 	@Override
 	public String toString() {
 		return "ProductVO [id=" + id + ", productName=" + productName + ", price=" + price + ", description="
 				+ description + ", category=" + category + ", availability=" + availability + "]";
 	}
 
-
 }
-
-
